@@ -77,7 +77,7 @@ export class MySqlConnection {
                             `Error disconnecting from database: ${err.stack}`
                         )
                     );
-
+                this.createConnection();
                 resolve();
             });
         });
