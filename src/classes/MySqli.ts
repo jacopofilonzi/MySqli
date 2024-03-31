@@ -69,18 +69,19 @@ export class MySqli {
                 "Impossible to disconnect from database, connection is undefined"
             );
 
-        return new Promise<void>((resolve, reject) => {
-            this.connection!.end((err) => {
-                if (err)
-                    reject(
-                        new Error(
-                            `Error disconnecting from database: ${err.stack}`
-                        )
-                    );
-                this.createConnection();
-                resolve();
+        if (this.connection!.state != "disconnected")
+            return new Promise<void>((resolve, reject) => {
+                this.connection!.end((err) => {
+                    if (err)
+                        reject(
+                            new Error(
+                                `Error disconnecting from database: ${err.stack}`
+                            )
+                        );
+                    this.createConnection();
+                    resolve();
+                });
             });
-        });
     }
 
     /**
