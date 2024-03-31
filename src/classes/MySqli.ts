@@ -40,7 +40,7 @@ export class MySqli {
     /**
      * Connect to the database
      */
-    private async connect(): Promise<number | null> {
+    async connect(): Promise<number | null> {
         if (this.connection === undefined) this.createConnection();
 
         if (this.connection === undefined)
@@ -63,7 +63,7 @@ export class MySqli {
     /**
      * Disconnect from the database
      */
-    private async disconnect(): Promise<void> {
+    async disconnect(): Promise<void> {
         if (this.connection === undefined)
             throw new Error(
                 "Impossible to disconnect from database, connection is undefined"
