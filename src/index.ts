@@ -1,4 +1,4 @@
-import { MySqlConnection } from './classes/MySqlConnection';
+import { MySqlConnection } from './classes/MySqli';
 
 export default MySqlConnection;
 
