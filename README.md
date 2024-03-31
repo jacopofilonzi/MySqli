@@ -1,2 +1,3 @@
 # MySqli
-A NodeJS interface for MySql
+
+A simple NodeJS interface for MySql
