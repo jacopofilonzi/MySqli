@@ -1,1 +1,1 @@
-export * from "./MySqlConnection";
+export * from "./MySqli";

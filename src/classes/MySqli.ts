@@ -3,7 +3,7 @@ import mysql from "mysql";
 import { QueryResultType } from "../types/QueryResultType";
 import { ExecuteQueryProps } from "../types/ExecuteQueryProps";
 
-export class MySqlConnection {
+export class MySqli {
     private credentials: AuthType | undefined = undefined;
     private connection: mysql.Connection | undefined = undefined;
 
